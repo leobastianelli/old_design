@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" type="image/png" href="http://sippsperu.com/plant.png">
+	<meta charset="UTF-8">
+	<title>TIM Biodiversidad</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css" />
+	<script src="http://sippsperu.com/js/app.js"></script>
+		<script>
+		var useremail = "";
+		var admin = "";
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="navbar navbar-expand-xl bg-body-tertiary d-block d-xl-none">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="images/sernanp-brand.svg" alt="sernanp" />
+					</a>
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+								<img src="images/sernanp-brand.svg" alt="sernanp" />
+							</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="top">
+								<div id="menu-sm">
+									<ul class="menu navbar-nav justify-content-end flex-grow-1">
+										<li class="nav-item">
+											<a href="#">usuario@dominio.com</a>
+										</li>
+										<li class="nav-item">
+											<a href="http://sippsperu.com/admin" target="_blank">Herramientas de Admin</a>
+										</li>
+										<li class="nav-item">
+											<a href="https://ga.sippsperu.com/" target="_blank">Gestor de aplicativos</a>
+										</li>
+									</ul>
+								</div>
+								<div id="menu-xl">
+									<ul id="navlist">
+										<li id="m-pap">
+											<a href="mostrar-mapas.html">Mostrar mapas</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="m-bio">
+											<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="m-acc">
+											<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="m-pro">
+											<a href="monitoreo-productivo.html">Monitoreo productivo</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="m-oso">
+											<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="l-tim">
+											<a href="linea-tim.html">Línea TIM</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+										<li id="d-dat">
+											<a href="descargar-datos.html">Descargar datos</a>
+											<img src="images/img_trans.gif" width="1" height="1">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="bottom">
+								<a href="privacidad.html">Privacidad</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<main id="wrapper" class="row">
+			<nav id="navigation" class="col-xl-2">
+				<div class="top">
+					<div id="menu-sm" class="brand">
+						<img src="images/sernanp-brand.svg" alt="sernanp" />
+						<ul class="menu">
+							<li>
+								<a href="#">usuario@dominio.com</a>
+							</li>
+							<li>
+								<a href="http://sippsperu.com/admin" target="_blank">Herramientas de Admin</a>
+							</li>
+							<li>
+								<a href="https://ga.sippsperu.com/" target="_blank">Gestor de aplicativos</a>
+							</li>
+						</ul>
+					</div>
+					<div id="menu-xl">
+						<ul id="navlist">
+							<li id="m-pap">
+								<a href="mostrar-mapas.html">Mostrar mapas</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="m-bio">
+								<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="m-acc">
+								<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="m-pro">
+								<a href="monitoreo-productivo.html">Monitoreo productivo</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="m-oso">
+								<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="l-tim">
+								<a href="linea-tim.html">Línea TIM</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+							<li id="d-dat">
+								<a href="descargar-datos.html">Descargar datos</a>
+								<img src="images/img_trans.gif" width="1" height="1">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom">
+					<a href="privacidad.html">Privacidad</a>
+				</div>
+			</nav>
+			
+			<div id="content" class="col-xl-10 col-lg-12">
+				<div class="row">
+					<div class="col-xl-10 mx-auto box-content">
+						<div class="content-header">
+							<h1>Descargar datos</h1>
+							<h3 class="content-title bg-blue">
+								&nbsp;
+							</h3>
+						</div>
+						<!--    AQUI INGRESA EL CÓDIGO FUENTE DE LA APP   -->
+						<div class="content-body">
+							<div class="col-3 offset-md-4">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="ave" id="ave" value="ave">
+									<label class="form-check-label" for="ave">
+										Ave
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="arbol" id="arbol" value="arbol">
+									<label class="form-check-label" for="arbol">
+										Árbol
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="arbusto" id="arbusto" value="arbusto">
+									<label class="form-check-label" for="arbusto">
+										Arbusto
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="herpetofauna" id="herpetofauna" value="herpetofauna">
+									<label class="form-check-label" for="herpetofauna">
+										Herpetofauna
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="hierba" id="hierba" value="hierba">
+									<label class="form-check-label" for="hierba">
+										Hierba
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="mamifero" id="mamifero" value="mamifero">
+									<label class="form-check-label" for="mamifero">
+										Mamífero
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="oso" id="oso" value="oso">
+									<label class="form-check-label" for="oso">
+										Oso de anteojos
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="cultivos" id="cultivos" value="cultivos">
+									<label class="form-check-label" for="cultivos">
+										Estadística de cultivos
+									</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="acciones" id="acciones" value="acciones">
+									<label class="form-check-label" for="acciones">
+										Acciones
+									</label>
+								</div>
+								<div class="col-8 mx-auto login-buttons">
+									<button class="button button-primary" type="submit" value="descargar">Descargar</button>
+								</div>
+							</div>
+						</div>
+						<div class="content-footer bb-2">
+							<div class="bl-footer">
+								<p>Si tu resultado sale en HTML, inténtalo de nuevo.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="branding">
+				<div class="row">
+					<div class="col-sm-4">
+						<img src="images/minan-brand.png" alt="MINAN">
+					</div>
+					<div class="col-sm-4">
+						<img src="images/sernanp-brand.png" alt="SERNANP">
+					</div>
+					<div class="col-sm-4">
+						<img src="images/copale-brand.png" alt="COPALE">
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+	<footer class="col-12 copyright">
+		<div class="row">
+			<div class="col-12 col-sm-4">
+				<p><b>Desarrollo conceptual:</b> Jesús Hernández Castán</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Código base de código abierto programado por:</b> Forest Carter</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Puntos de mejora implementados para Perú:</b> Yared Sabinas Figueroa</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

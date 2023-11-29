@@ -1,0 +1,27 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+**/.DS_Store
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Sass 
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# CSS & JS
+/src/*.css
+/src/*.js
+
+
+
+src/
+*.js
+*.json

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" type="image/png" href="http://sippsperu.com/plant.png">
+	<meta charset="UTF-8">
+	<title>TIM Biodiversidad</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css" />
+	<script src="http://sippsperu.com/js/app.js"></script>
+		<script>
+		var useremail = "";
+		var admin = "";
+	</script>
+</head>
+<body id="udpbody">
+	<main class="report">
+		<div id="app" class="appOso">
+			<div>
+				<div class="udplayout">
+					<div id="bbtop">
+						<span class="left">-9.89517, -75.0143</span>
+						<span class="right">-9.89517, -74.7865</span>
+					</div>
+					<div id="udpmapdiv" class="border border-dark">
+						<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-touch-zoom"></div>
+					</div>
+					<div id="bbbottom">
+						<span class="left">-10.1241, -75.0143</span>
+						<span class="right">-10.1241, -74.7865</span>
+					</div>
+					<div id="legenddiv" class="mt-3">
+						<ul>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="BOSQUE-MONTANA"></div>
+								<p class="legendp">BOSQUE DE MONTAÑA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="AREAS-NO-BOSQUE-AMAZONICO"></div>
+								<p class="legendp">AREAS DE NO BOSQUE AMAZÓNICO</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="BOSQUE-TERRAZA-BAJA"></div>
+								<p class="legendp">BOSQUE DE TERRAZA BAJA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="BOSQUE-COLINA-ALTA"></div>
+								<p class="legendp">BOSQUE DE COLINA ALTA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="BOSQUE-TERRAZA-ALTA"></div>
+								<p class="legendp">BOSQUE DE TERRAZA ALTA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendColorBox" id="BOSQUE-COLINA-BAJA"></div>
+								<p class="legendp">BOSQUE DE COLINA BAJA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<div class="legendlines" id="CORRIENTE_DE_AGUA"></div>
+								<p class="legendp">CORRIENTE_DE_AGUA</p>
+							</div>
+							<div class="legendEntryDiv">
+								<img src="/images/MANANTIAL.png" id="MANANTIAL">
+								<p class="legendp">MANANTIAL</p>
+							</div>
+						</ul>
+					</div>
+					<div id="descriptiondiv">
+						<h6 id="descripcionheader">DESCRIPCIÓN</h6>
+						<p id="descripciontext">La unidad de Paisaje (UP) 21719 presenta un total de 0 de avistamientos de Oso de Anteojos donde el 0% son adultos, 0% son juveniles y 0% son osesnos. De los osos avistados indirectamente, 1 fueron identificados por pelos y la mayoria fueron observados en tocon.</p>
+					</div>
+					<div id="titlediv">
+						<div id="updmunititle">
+							<h1 id="framentation">Reporte de Oso de Anteojos</h1>
+							<h4 id="muniudp">PROVINCIA DE CONSTITUCIÓN, PUERTO BERMÚDEZ, OXAPAMPA, UP 21719</h4>
+						</div>
+					</div>
+					<div id="parchestable" class="no-bg mt-3">
+						<div class="row">
+							<div class="container">
+								<div class="flex-column d-flex justify-content-around align-items-center">
+									<div class="react-bootstrap-table table-responsive table-third">
+										<table class="table table-striped table-hover table-condensed bsparchtable small">
+											<tbody>
+												<tr>
+													<td>RIQUEZA DE TIPOS DE PARCHE</td>
+													<td>6</td>
+													<td>-</td>
+												</tr>
+												<tr>
+													<td>ABUNDANCIA DE PARCHES</td>
+													<td>612</td>
+													<td>-</td>
+												</tr>
+												<tr>
+													<td>PARCHES CONTINUOS</td>
+													<td>427</td>
+													<td>-</td>
+												</tr>
+												<tr>
+													<td>RAZON DE CONTINUIDAD DE PARCHES</td>
+													<td>0.6977</td>
+													<td>-</td>
+												</tr>
+												<tr>
+													<td>DOMINANCIA ENTRE TAMANOS DE PARCHE</td>
+													<td>0.1980</td>
+													<td>BOSQUE DE COLINA BAJA</td>
+												</tr>
+												<tr>
+													<td>DOMINANCIA ENTRE TIPOS DE PARCHE</td>
+													<td>0.2983</td>
+													<td>BOSQUE DE COLINA BAJA</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="reporteOso">
+			<h3>Reporte de Oso de Anteojos</h3>
+			<h4>Total de avistamientos</h4>
+			<table class="total">
+				<tbody>
+					<tr>
+						<td>Total de Avistamientos: </td>
+						<td>49</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="reporTabs table-responsive table-third">
+				<table class="table table-striped table-hover table-condensed mt-5">
+					<thead>
+						<tr>
+							<th colspan="3">Total de Avistamientos por Tipo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Oso Anteojos</td>
+							<td>Indirecto</td>
+							<td>44</td>
+						</tr>
+						<tr>
+							<td>Otra Especie</td>
+							<td></td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>Oso Anteojos</td>
+							<td>Directo</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Otra Especie</td>
+							<td></td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>Oso Anteojos</td>
+							<td>Indirecto</td>
+							<td>1</td>
+						</tr>
+				</tbody>
+				</table>
+				
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<th colspan="3">Total de Avistamientos por Género</th>
+						</tr>
+					</thead>
+				<tbody>
+					<tr>
+							<td>Macho</td>
+							<td>Hembra</td>
+							<td>NN</td>
+						</tr>
+						<tr>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<th colspan="3">Total de Avistamientos por Etapa de Vida</th>
+						</tr>
+					</thead>
+				<tbody>
+						<tr>
+							<td>Adulto</td>
+							<td>Juvenil</td>
+							<td>Osesno</td>
+						</tr>
+						<tr>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+				</tbody>
+				</table>
+				
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<th colspan="3">Total de Avistamientos Indirectos por Rastros</th>
+						</tr>
+					</thead>
+				<tbody>
+						<tr>
+							<td>Pelos</td>
+							<td>1</td>
+						</tr>
+				</tbody>
+				</table>
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+						<th colspan="3">Total de Avistamientos Indirectos por Micrositio</th>
+					</tr>
+					</thead>
+				<tbody>
+						<tr>
+							<td>Tocon</td>
+							<td>1</td>
+						</tr>
+				</tbody>
+				</table>
+			</div>
+			<br>
+			<h4>Avistamientos en la zona</h4>
+			<table class="total">
+				<tbody>
+					<tr>
+						<td>Total de Avistamientos: </td>
+						<td>0</td>
+						<td>0.0%</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="reporTabs table-responsive table-third mt-3">
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<td colspan="3"><b>Total de Avistamientos por Tipo</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="3">Sin registros</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<td colspan="3">Total de Avistamientos por Género</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Hembra</td>
+							<td>Macho</td>
+							<td>NN</td>
+						</tr>
+						<tr>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+				</tbody>
+				</table>
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<td colspan="3"><b>Total de Avistamientos por Etapa de Vida</b></td>
+						</tr>
+					</thead>
+				<tbody>
+						<tr>
+							<td>Adulto</td>
+							<td>Juvenil</td>
+							<td>Osesno</td>
+						</tr>
+						<tr>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+				</tbody>
+				</table>
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<td colspan="4"><b>Total de Avistamientos Indirectos por Rastros</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4">Sin registros</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-striped table-hover table-condensed">
+					<thead>
+						<tr>
+							<td colspan="4"><b>Total de Avistamientos Indirectos por Micrositio</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4">Sin registros</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+	<div class="branding">
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="images/minan-brand.png" alt="MINAN">
+			</div>
+			<div class="col-sm-4">
+				<img src="images/sernanp-brand.png" alt="SERNANP">
+			</div>
+			<div class="col-sm-4">
+				<img src="images/copale-brand.png" alt="COPALE">
+			</div>
+		</div>
+	</div>
+	<footer class="col-12 copyright">
+		<div class="row">
+			<div class="col-12 col-sm-4">
+				<p><b>Desarrollo conceptual:</b> Jesús Hernández Castán</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Código base de código abierto programado por:</b> Forest Carter</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Puntos de mejora implementados para Perú:</b> Yared Sabinas Figueroa</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

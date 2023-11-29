@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" type="image/png" href="http://sippsperu.com/plant.png">
+	<meta charset="UTF-8">
+	<title>TIM Biodiversidad</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css" />
+	<script src="http://sippsperu.com/js/app.js"></script>
+		<script>
+		var useremail = "";
+		var admin = "";
+	</script>
+</head>
+<body id="udpbody">
+	<div id="app">
+		<main>
+			<div class="udplayout">
+				<div id="bbtop">
+					<span class="left">-10.3565, -75.4674</span>
+					<span class="right">-10.3565, -75.1452</span>
+				</div>
+				<div id="udpmapdiv" class="border border-dark">
+					<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-touch-zoom"></div>
+				</div>
+				<div id="bbbottom">
+					<span class="left">-10.6797, -75.4674</span>
+					<span class="right">-10.6797, -75.1452</span>
+				</div>
+				<div id="legenddiv">
+					<ul>
+						<div class="legendEntryDiv">
+							<div class="legendColorBox" id="BOSQUE-MONTANA"></div>
+							<p class="legendp">BOSQUE DE MONTAÑA</p>
+						</div>
+						<div class="legendEntryDiv">
+							<div class="legendColorBox" id="BOSQUE-MONTANA-MONTANO"></div>
+							<p class="legendp">BOSQUE DE MONTAÑA MONTANO</p>
+						</div>
+						<div class="legendEntryDiv">
+							<div class="legendColorBox" id="BOSQUE-MONTANA-BASIMONTANO"></div>
+							<p class="legendp">BOSQUE DE MONTAÑA BASIMONTANO</p>
+						</div>
+						<div class="legendEntryDiv">
+							<div class="legendColorBox" id="AREAS-NO-BOSQUE-AMAZONICO"></div>
+							<p class="legendp">AREAS DE NO BOSQUE AMAZÓNICO</p>
+						</div>
+						<div class="legendEntryDiv">
+							<div class="legendColorBox" id="BOSQUE-TERRAZA-ALTA"></div>
+							<p class="legendp">BOSQUE DE TERRAZA ALTA</p>
+						</div>
+						<div class="legendEntryDiv">
+							<div class="legendlines" id="CORRIENTE_DE_AGUA"></div>
+							<p class="legendp">CORRIENTE_DE_AGUA</p>
+						</div>
+						<div class="legendEntryDiv">
+							<img src="/images/MANANTIAL.png" id="MANANTIAL">
+							<p class="legendp">MANANTIAL</p>
+						</div>
+					</ul>
+				</div>
+				<div id="descriptiondiv">
+					<h6 id="descripcionheader">DESCRIPCIÓN</h6>
+					<p id="descripciontext">La unidad de Paisaje (UP) 21777 presenta una riqueza de parches igual a 5 y una abundancia de parches igual a 135. De estos parches, 130 son continuos presentando una razón de continuidad de 0.9630. Dentro de las aproximadamente 52858 hectáreas que conforman la UP , el Uso de Suelo y Vegetación (USV) más dominante es BOSQUE DE MONTAÑA BASIMONTANO que representa el 60.71% del área total de la unidad y está dividido en 7 parches. El parche de mayor tamaño corresponde al USV de AREAS DE NO BOSQUE AMAZÓNICO con un área de aproximadamente 8.219 hectáreas. La dominancia entre tamaños de parche dentro de esta UP es de 0.0001555, mientras que la dominancia entre tipos de parche es igual a 0.6071. Esta UP presenta además una razón de dispersión hídrica de 0.007583 con corrientes de agua que cubren un total de 400.8 kilometros lineales; así como una densidad de cuerpos de agua de 0.005488 y un área de 290.1 hectáreas.</p>
+				</div>
+				<div id="titlediv">
+					<div id="updmunititle">
+						<h1 id="framentation">MAPA DE FRAGMENTACIÓN AMBIENTAL</h1>
+						<h4 id="muniudp">PROVINCIA DE OXAPAMPA, PALCAZÚ, VILLA RICA,	OXAPAMPA,	UP 21777</h4>
+					</div>
+				</div>
+				<div id="parchestable" class="no-bg">
+					<div>
+						<div class="container usoSuelo my-3">
+							<div class="flex-column d-flex justify-content-around align-items-center">
+								<div class="react-bootstrap-table table-responsive table-third">
+									<table class="table table-striped table-hover table-bordered table-condensed bsparchtable">
+										<thead>
+											<tr>
+												<th>Parche</th>
+												<th>Cobertura</th>
+												<th>Continuidad</th>
+												<th>Area (h)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000005913%</td>
+												<td>Continuo</td>
+												<td>0.003126</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0009406%</td>
+												<td>Continuo</td>
+												<td>0.4972</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001836%</td>
+												<td>Continuo</td>
+												<td>0.09703</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00005927%</td>
+												<td>Continuo</td>
+												<td>0.03133</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0007604%</td>
+												<td>Continuo</td>
+												<td>0.4019</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.01411%</td>
+												<td>Continuo</td>
+												<td>7.456</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00004159%</td>
+												<td>Continuo</td>
+												<td>0.02198</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.004514%</td>
+												<td>Continuo</td>
+												<td>2.386</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002040%</td>
+												<td>Continuo</td>
+												<td>0.1078</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00001706%</td>
+												<td>Continuo</td>
+												<td>0.009018</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00007470%</td>
+												<td>Continuo</td>
+												<td>0.03948</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001832%</td>
+												<td>Continuo</td>
+												<td>0.09685</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00009959%</td>
+												<td>Continuo</td>
+												<td>0.05264</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.01555%</td>
+												<td>Continuo</td>
+												<td>8.219</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0009717%</td>
+												<td>Continuo</td>
+												<td>0.5136</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0007664%</td>
+												<td>Continuo</td>
+												<td>0.4051</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002730%</td>
+												<td>Continuo</td>
+												<td>0.1443</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001556%</td>
+												<td>Continuo</td>
+												<td>0.08222</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>2.046e-8%</td>
+												<td>Continuo</td>
+												<td>0.00001082</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>3.069e-8%</td>
+												<td>Continuo</td>
+												<td>0.00001622</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.001606%</td>
+												<td>Continuo</td>
+												<td>0.8487</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00009092%</td>
+												<td>Continuo</td>
+												<td>0.04806</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.001976%</td>
+												<td>Continuo</td>
+												<td>1.044</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002465%</td>
+												<td>Continuo</td>
+												<td>0.1303</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0005581%</td>
+												<td>Continuo</td>
+												<td>0.2950</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0007433%</td>
+												<td>Continuo</td>
+												<td>0.3929</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002515%</td>
+												<td>Continuo</td>
+												<td>0.1330</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001281%</td>
+												<td>Continuo</td>
+												<td>0.06771</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>3.410e-9%</td>
+												<td>Continuo</td>
+												<td>0.000001803</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001277%</td>
+												<td>Continuo</td>
+												<td>0.06748</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001518%</td>
+												<td>Continuo</td>
+												<td>0.08024</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.001167%</td>
+												<td>Continuo</td>
+												<td>0.6166</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00002360%</td>
+												<td>Continuo</td>
+												<td>0.01247</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001234%</td>
+												<td>Continuo</td>
+												<td>0.06524</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001566%</td>
+												<td>Continuo</td>
+												<td>0.08277</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0003972%</td>
+												<td>Continuo</td>
+												<td>0.2099</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000004437%</td>
+												<td>Continuo</td>
+												<td>0.002345</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00001377%</td>
+												<td>Continuo</td>
+												<td>0.007279</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000005184%</td>
+												<td>Continuo</td>
+												<td>0.002740</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00008398%</td>
+												<td>Continuo</td>
+												<td>0.04439</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0008878%</td>
+												<td>Continuo</td>
+												<td>0.4693</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0003397%</td>
+												<td>Continuo</td>
+												<td>0.1796</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.002761%</td>
+												<td>Continuo</td>
+												<td>1.459</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001968%</td>
+												<td>Continuo</td>
+												<td>0.1040</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00001279%</td>
+												<td>Continuo</td>
+												<td>0.006761</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>2.455e-7%</td>
+												<td>Continuo</td>
+												<td>0.0001298</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002011%</td>
+												<td>Continuo</td>
+												<td>0.1063</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0002446%</td>
+												<td>Continuo</td>
+												<td>0.1293</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001004%</td>
+												<td>Continuo</td>
+												<td>0.05305</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.00008310%</td>
+												<td>Continuo</td>
+												<td>0.04392</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001738%</td>
+												<td>Continuo</td>
+												<td>0.09185</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0003785%</td>
+												<td>Continuo</td>
+												<td>0.2000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>3.069e-8%</td>
+												<td>Continuo</td>
+												<td>0.00001622</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0005443%</td>
+												<td>Continuo</td>
+												<td>0.2877</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0001295%</td>
+												<td>Continuo</td>
+												<td>0.06842</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.0004765%</td>
+												<td>Continuo</td>
+												<td>0.2519</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+												<td>0.000%</td>
+												<td>Continuo</td>
+												<td>0.000</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA</td>
+												<td>2.886%</td>
+												<td>Aislado</td>
+												<td>1526</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA</td>
+												<td>2.176%</td>
+												<td>Continuo</td>
+												<td>1150</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA</td>
+												<td>0.3616%</td>
+												<td>Continuo</td>
+												<td>191.1</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA</td>
+												<td>1.938%</td>
+												<td>Continuo</td>
+												<td>1024</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA</td>
+												<td>6.550%</td>
+												<td>Continuo</td>
+												<td>3462</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.5197%</td>
+												<td>Continuo</td>
+												<td>274.7</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>58.28%</td>
+												<td>Continuo</td>
+												<td>3.080e+4</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.03722%</td>
+												<td>Continuo</td>
+												<td>19.67</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.9613%</td>
+												<td>Continuo</td>
+												<td>508.1</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.1511%</td>
+												<td>Continuo</td>
+												<td>79.86</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.6943%</td>
+												<td>Continuo</td>
+												<td>367.0</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+												<td>0.07836%</td>
+												<td>Aislado</td>
+												<td>41.42</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>14.24%</td>
+												<td>Continuo</td>
+												<td>7529</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.05099%</td>
+												<td>Continuo</td>
+												<td>26.95</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>5.296%</td>
+												<td>Continuo</td>
+												<td>2799</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>2.228%</td>
+												<td>Continuo</td>
+												<td>1177</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.4349%</td>
+												<td>Continuo</td>
+												<td>229.9</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.2211%</td>
+												<td>Continuo</td>
+												<td>116.9</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.8071%</td>
+												<td>Continuo</td>
+												<td>426.6</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.006501%</td>
+												<td>Continuo</td>
+												<td>3.436</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.00002119%</td>
+												<td>Continuo</td>
+												<td>0.01120</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.3395%</td>
+												<td>Aislado</td>
+												<td>179.5</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.01141%</td>
+												<td>Aislado</td>
+												<td>6.030</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE MONTAÑA MONTANO</td>
+												<td>0.04969%</td>
+												<td>Aislado</td>
+												<td>26.26</td>
+											</tr>
+											<tr>
+												<td>BOSQUE DE TERRAZA ALTA</td>
+												<td>0.7843%</td>
+												<td>Continuo</td>
+												<td>414.6</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="container usoSuelo my-3">
+							<div class="flex-column d-flex justify-content-around align-items-center">
+								<div class="react-bootstrap-table table-responsive table-third">
+									<table class="table table-striped table-hover table-bordered table-condensed bsparchtable">
+										<tbody>
+											<tr>
+												<td>RIQUEZA DE TIPOS DE PARCHE</td>
+												<td>5</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>ABUNDANCIA DE PARCHES</td>
+												<td>135</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>PARCHES CONTINUOS</td>
+												<td>130</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>RAZON DE CONTINUIDAD DE PARCHES</td>
+												<td>0.9630</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>DOMINANCIA ENTRE TAMANOS DE PARCHE</td>
+												<td>0.0001555</td>
+												<td>AREAS DE NO BOSQUE AMAZÓNICO</td>
+											</tr>
+											<tr>
+												<td>DOMINANCIA ENTRE TIPOS DE PARCHE</td>
+												<td>0.6071</td>
+												<td>BOSQUE DE MONTAÑA BASIMONTANO</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="container usoSuelo my-3">
+							<div class="flex-column d-flex justify-content-around align-items-center">
+								<div class="react-bootstrap-table table-responsive table-third">
+									<table class="table table-striped table-hover table-bordered table-condensed bsparchtable">
+										<thead>
+											<tr>
+												<th>ELEMENTO</th>
+												<th>LONGITUD (km)</th>
+												<th>AREA (h^2)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Corriente  de agua</td>
+												<td>400.8</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Cuerpo de agua</td>
+												<td>-</td>
+												<td>290.1</td>
+											</tr>
+											<tr>
+												<td>Manantial</td>
+												<td>-</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>TOTAL</td>
+												<td>400.8</td>
+												<td>290.1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="branding">
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="images/minan-brand.png" alt="MINAN">
+				</div>
+				<div class="col-sm-4">
+					<img src="images/sernanp-brand.png" alt="SERNANP">
+				</div>
+				<div class="col-sm-4">
+					<img src="images/copale-brand.png" alt="COPALE">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="col-12 copyright">
+		<div class="row">
+			<div class="col-12 col-sm-4">
+				<p><b>Desarrollo conceptual:</b> Jesús Hernández Castán</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Código base de código abierto programado por:</b> Forest Carter</p>
+			</div>
+			<div class="col-12 col-sm-4">
+				<p><b>Puntos de mejora implementados para Perú:</b> Yared Sabinas Figueroa</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

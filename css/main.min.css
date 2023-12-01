@@ -116,21 +116,21 @@ u {
 #navigation .top #menu-sm ul.menu,nav.navbar .top #menu-sm ul.menu {
     margin-bottom:3rem;
     padding:0;
-    text-align:right
+    text-align:left
 }
 #navigation .top #menu-sm ul.menu li,nav.navbar .top #menu-sm ul.menu li {
     font-size:inherit;
     margin:0
 }
-#navigation .top #menu-sm ul.menu li:first-child,nav.navbar .top #menu-sm ul.menu li:first-child {
+/* #navigation .top #menu-sm ul.menu li:first-child,nav.navbar .top #menu-sm ul.menu li:first-child {
     background-color:#32425b
-}
+} */
 #navigation .top #menu-sm ul.menu li:first-child a,nav.navbar .top #menu-sm ul.menu li:first-child a {
     color:#fff
 }
-#navigation .top #menu-sm ul.menu li:nth-child(2),nav.navbar .top #menu-sm ul.menu li:nth-child(2) {
+/* #navigation .top #menu-sm ul.menu li:nth-child(2),nav.navbar .top #menu-sm ul.menu li:nth-child(2) {
     background-color:#e4ede3
-}
+} */
 #navigation .top #menu-sm ul.menu li:nth-child(3),nav.navbar .top #menu-sm ul.menu li:nth-child(3) {
     background-color:#fff
 }
@@ -145,10 +145,9 @@ u {
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    display:grid;
-    grid-template-columns:23% auto;
     margin-bottom:1rem;
-    padding:0 1rem
+    padding:0 1rem;
+    text-align: left;
 }
 #navigation .top #menu-xl ul#navlist li a,nav.navbar .top #menu-xl ul#navlist li a {
     -webkit-box-ordinal-group:3;
@@ -165,7 +164,7 @@ u {
     width:40px
 }
 #navigation .top a,nav.navbar .top a {
-    color:#32425b;
+    color:#fff;
     display:grid
 }
 #navigation .bottom a,#navigation .top #menu-sm ul.menu li a,nav.navbar .bottom a,nav.navbar .top #menu-sm ul.menu li a {
@@ -194,7 +193,7 @@ nav.navbar .offcanvas .offcanvas-body {
     padding:1rem 0
 }
 #navigation,nav.navbar .offcanvas .offcanvas-body {
-    background:linear-gradient(135deg,#adb58c,#6b734e)
+    background:#7698A3;
 }
 #navigation {
     display:none;
@@ -986,14 +985,21 @@ h3.content-title.bg-blue {
 header.navbar{
     background-color: #F0F0F0;
 }
-header.navbar .button-login{
+header.navbar .button-active-login{
     background-color: #EA4E34;
 }
-header.navbar .button-login a{
+header.navbar .button-active-login a{
+    color: #fff;
+}
+header.navbar .button-login:hover{
+    background-color: #EA4E34;
+    transition: 0.8s;
+}
+header.navbar .button-login:hover a{
     color: #fff;
 }
 
-header.navbar .button-register a{
+header.navbar .button-login a{
     color: #4F656C;
 }
 .container-logo{
@@ -1008,4 +1014,19 @@ header.navbar .button-register a{
     width: 100%;
     text-align: center;
     padding-bottom: 15px;
+}
+.w-33{
+    width: 33.33%;
+}
+.w-80{
+    width: 80%;
+}
+.w-20{
+    width: 20%;
+}
+.content-body.bb-2 {
+    border-radius: 0;
+}
+div#menu-sm p {
+    color: #fff;
 }

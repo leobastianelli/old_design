@@ -91,9 +91,21 @@
 				</div>
 			</nav>
 		</div>
-
+		<header class="navbar">
+			<div class="container-logo">
+				<img src="images/logo-sipps.png" alt="Logo SIPPS" width="150">
+			</div>
+			<div>
+				<button class="button-login">
+					<a href="login.html">Inicio de sesión</a>
+				</button>
+				<button class="button-active-login">
+					<a href="register.html">Registro</a>
+				</button>
+			</div>
+		</header>
 		<main id="wrapper" class="row">
-			<nav id="navigation" class="col-xl-2">
+			<!-- <nav id="navigation" class="col-xl-2">
 				<div class="top">
 					<div id="menu-sm" class="brand">
 						<img src="images/sernanp-brand.svg" alt="sernanp" />
@@ -110,52 +122,64 @@
 				<div class="bottom">
 					<a href="privacidad.html">Privacidad</a>
 				</div>
-			</nav>
+			</nav> -->
 			
-			<div id="content" class="col-xl-10 col-lg-12">
+			<div id="content" class="col-xl-12 col-lg-12">
 				<div class="row">
-					<div class="col-xl-9 mx-auto box-content">
+					<div class="col-xl-7 mx-auto box-content">
 						<div class="content-header">
+							<h1>Sistema de Información para la planeación de los Paisajes Sostenibles</h1>
 							<h2 class="content-title bg-blue">
 								Registro
 							</h2>
 						</div>
 						<div class="content-body bb-2">
-							<form class="forms validate-form align-items-center">
-								<div class="col-10 mx-auto mb-4">
-									<input class="form-control form-control-lg" type="text" placeholder="Nombre">
-								</div>
-								<div class="col-10 mx-auto mb-4">
-									<input class="form-control form-control-lg" type="text" placeholder="Apellido Materno">
-								</div>
-								<div class="col-10 mx-auto mb-4">
-									<input class="form-control form-control-lg" type="text" placeholder="Apellido Paterno">
-								</div>
-								<div class="input-group">
-									<div class="col-4 mx-auto mb-4">
-										<input class="form-control form-control-lg" type="email" placeholder="Email">
+							<form class="forms validate-form align-items-center d-flex flex-column">
+								<div class="col-10 mb-4 d-flex flex-row">
+									<div class="w-33 mb-2 mx-2 ">
+										<label for="">Nombre</label>
+										<input class="form-control form-control-lg" type="text" placeholder="">
 									</div>
-									<div class="col-4 mx-auto mb-4">
-										<input class="form-control form-control-lg" type="number" placeholder="Teléfono">
+									<div class="w-33 mb-2 mx-2">
+										<label for="">Apellido Materno</label>
+										<input class="form-control form-control-lg" type="text" placeholder="">
+									</div>
+									<div class="w-33 mb-2 mx-2">
+										<label for="">Apellido Paterno</label>
+										<input class="form-control form-control-lg" type="text" placeholder="">
 									</div>
 								</div>
-								<div class="col-10 mx-auto mb-4">
-									<input class="form-control form-control-lg" type="text" placeholder="Dirección">
-								</div>
-								<div class="input-group">
-									<div class="col-4 mx-auto mb-4 validate-input alert-validate">
-										<input class="form-control form-control-lg" type="password" placeholder="Contraseña">
+								<div class="col-10 mb-4 d-flex flex-row">
+									<div class="w-80 mb-2 mx-2">
+										<label for="">Dirección</label>
+										<input class="form-control form-control-lg" type="text" placeholder="">
 									</div>
-									<div class="col-4 mx-auto mb-4 validate-input alert-validate">
-										<input class="form-control form-control-lg" type="password" placeholder="Confirma Contraseña">
+									<div class="w-20 mb-2 mx-2">
+										<label for="">Teléfono</label>
+										<input class="form-control form-control-lg" type="number" placeholder="">
 									</div>
 								</div>
-								<div class="col-10 mx-auto mb-4">
-									<textarea name="notas" id="notas" cols="" rows="10" placeholder="Notas"></textarea>
+								<div class="col-10  mb-4 d-flex flex-row">
+									<div class="w-33 mb-2 mx-2">
+										<label for="">Email</label>
+										<input class="form-control form-control-lg" type="email" placeholder="">
+									</div>
+									<div class="w-33 mb-2 mx-2 validate-input alert-validate">
+										<label for="">Contraseña</label>
+										<input class="form-control form-control-lg" type="password" placeholder="">
+									</div>
+									<div class="w-33 mb-2 mx-2 validate-input alert-validate">
+										<label for="">Confirma Contraseña</label>
+										<input class="form-control form-control-lg" type="password" placeholder="">
+									</div>
 								</div>
-								<div class="col-8 mx-auto mb-4 login-buttons">
+								<div class="col-10 mb-2">
+									<label for="">Notas</label>
+									<textarea name="notas" id="notas" cols="" rows="10" placeholder=""></textarea>
+								</div>
+								<div class="col-8 mx-auto login-buttons">
 									<button class="button button-primary" type="submit">
-										<a href="mostrar-mapas.html">Iniciar sesión</a>
+										<a href="mostrar-mapas.html">Registrar</a>
 									</button>
 								</div>
 							</form>
@@ -164,16 +188,19 @@
 				</div>
 			</div>
 			<div class="branding">
+				<div class="bottom">
+					<a href="privacidad.html" class="link-privacidad">Privacidad</a>
+				</div>
 				<div class="row">
-					<div class="col-sm-4">
-						<img src="images/minan-brand.png" alt="MINAN">
+					<div class="col-sm-6">
+						<img src="images/logo-vogel.png" alt="VOGEL">
 					</div>
-					<div class="col-sm-4">
-						<img src="images/sernanp-brand.png" alt="SERNANP">
+					<div class="col-sm-6">
+						<img src="images/logo-gic.png" alt="SERNAP">
 					</div>
-					<div class="col-sm-4">
+					<!-- <div class="col-sm-4">
 						<img src="images/copale-brand.png" alt="COPALE">
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</main>

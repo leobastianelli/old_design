@@ -91,16 +91,28 @@
 				</div>
 			</nav>
 		</div>
-
+		<header class="navbar">
+			<div class="container-logo">
+				<img src="images/logo-sipps.png" alt="Logo SIPPS" width="150">
+			</div>
+			<div>
+				<button id="" class="button-active-login">
+					<a href="login.html">Cerrar sesión</a>
+				</button>
+			</div>
+		</header>
 		<main id="wrapper" class="row">
 			<nav id="navigation" class="col-xl-2">
 				<div class="top">
+					<p class="usuario-title">Nombre de usuario</p>
 					<div id="menu-sm" class="brand">
-						<img src="images/sernanp-brand.svg" alt="sernanp" />
+						
 						<ul class="menu">
 							<li>
 								<a href="admin.html">usuario@dominio.com</a>
 							</li>
+						</ul>
+						<ul class="menu">
 							<li>
 								<a href="admin.html">Herramientas de Admin</a>
 							</li>
@@ -111,52 +123,59 @@
 					</div>
 					<div id="menu-xl">
 						<ul id="navlist">
-							<li id="m-pap">
+							<li id="m-pap" class="">
 								<a href="mostrar-mapas.html">Mostrar mapas</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-bio">
+							<li id="m-bio" class="">
 								<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-acc">
+							<li id="m-acc" class="">
 								<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-pro">
+							<li id="m-pro" class="link-active">
 								<a href="monitoreo-productivo.html">Monitoreo productivo</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-oso">
 								<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
-								<img src="images/img_trans.gif" width="1" height="1">
-							</li>
-							<li id="l-tim">
-								<a href="linea-tim.html">Línea TIM</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="m-cer">
 								<a href="marcas-certificacion.html">Marcas de certificación</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
-							<li id="l-out">
+							<li id="l-tim">
+								<a href="linea-tim.html">Línea TIM</a>
+							</li>
+							<!-- <li id="l-out">
 								<a href="index.html">Cerrar sesión</a>
 								<img src="images/img_trans.gif" width="1" height="1">
-							</li>
+							</li> -->
 						</ul>
 					</div>
-				</div>
-				<div class="bottom">
-					<a href="privacidad.html">Privacidad</a>
+					<ul class="menu">
+						<a href="privacidad.html">Privacidad</a>
+					</ul>
 				</div>
 			</nav>
 			
 			<div id="content" class="col-xl-10 col-lg-12">
 				<div class="row">
 					<div class="col-xl-10 mx-auto box-content">
+						
 						<div class="content-header">
 							<h1>Ingresar excel</h1>
-							<h3 class="content-title bg-green">
+							<div class="content-footer bb-2">
+								<div class="bl-footer">
+									<p>Si no hizo la observación, escriba 0000.</p>
+									<p>Si hizo la observación y no hubo especies, escriba 000.</p>
+									<p>Si no sabe con certeza algún dato, escriba 00.</p>
+									<p>Escriba las medidas con 3 grados de precision. Ejemplo: 1.792.</p>
+									<p>Escriba las coordenadas con 4 grados de precision. Ejemplo: -110.8170.</p>
+								</div>
+							</div>
+							<h3 class="content-title bg-blue">
 								Elegir Línea de Monitoreo Transecto Punto (MTP)
 							</h3>
 							<h3 class="content-title bg-blue">
@@ -215,31 +234,23 @@
 								</div>
 							</div>
 						</div>
-						<div class="content-footer bb-2">
-							<div class="bl-footer">
-								<p>Si no hizo la observación, escriba 0000.</p>
-								<p>Si hizo la observación y no hubo especies, escriba 000.</p>
-								<p>Si no sabe con certeza algún dato, escriba 00.</p>
-								<p>Escriba las medidas con 3 grados de precision. Ejemplo: 1.792.</p>
-								<p>Escriba las coordenadas con 4 grados de precision. Ejemplo: -110.8170.</p>
-							</div>
+					</div>
+				</div>
+				<div class="branding">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="images/logo-vogel.png" alt="VOGEL">
 						</div>
+						<div class="col-sm-6">
+							<img src="images/logo-gic.png" alt="SERNAP">
+						</div>
+						<!-- <div class="col-sm-4">
+							<img src="images/copale-brand.png" alt="COPALE">
+						</div> -->
 					</div>
 				</div>
 			</div>
-			<div class="branding">
-				<div class="row">
-					<div class="col-sm-4">
-						<img src="images/minan-brand.png" alt="MINAN">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/sernanp-brand.png" alt="SERNANP">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/copale-brand.png" alt="COPALE">
-					</div>
-				</div>
-			</div>
+
 		</main>
 	</div>
 	<footer class="col-12 copyright">

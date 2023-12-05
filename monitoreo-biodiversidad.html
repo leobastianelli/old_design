@@ -91,16 +91,28 @@
 				</div>
 			</nav>
 		</div>
-
+		<header class="navbar">
+			<div class="container-logo">
+				<img src="images/logo-sipps.png" alt="Logo SIPPS" width="150">
+			</div>
+			<div>
+				<button id="" class="button-active-login">
+					<a href="login.html">Cerrar sesión</a>
+				</button>
+			</div>
+		</header>
 		<main id="wrapper" class="row">
 			<nav id="navigation" class="col-xl-2">
 				<div class="top">
+					<p class="usuario-title">Nombre de usuario</p>
 					<div id="menu-sm" class="brand">
-						<img src="images/sernanp-brand.svg" alt="sernanp" />
+						
 						<ul class="menu">
 							<li>
 								<a href="admin.html">usuario@dominio.com</a>
 							</li>
+						</ul>
+						<ul class="menu">
 							<li>
 								<a href="admin.html">Herramientas de Admin</a>
 							</li>
@@ -111,147 +123,153 @@
 					</div>
 					<div id="menu-xl">
 						<ul id="navlist">
-							<li id="m-pap">
+							<li id="m-pap" class="">
 								<a href="mostrar-mapas.html">Mostrar mapas</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-bio">
+							<li id="m-bio" class="link-active">
 								<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-acc">
+							<li id="m-acc" class="">
 								<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-pro">
 								<a href="monitoreo-productivo.html">Monitoreo productivo</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-oso">
 								<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="m-cer">
 								<a href="marcas-certificacion.html">Marcas de certificación</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="l-tim">
 								<a href="linea-tim.html">Línea TIM</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
-							<li id="l-out">
+							<!-- <li id="l-out">
 								<a href="index.html">Cerrar sesión</a>
 								<img src="images/img_trans.gif" width="1" height="1">
-							</li>
+							</li> -->
 						</ul>
 					</div>
-				</div>
-				<div class="bottom">
-					<a href="privacidad.html">Privacidad</a>
+					<ul class="menu">
+						<a href="privacidad.html">Privacidad</a>
+					</ul>
 				</div>
 			</nav>
-			
 			<div id="content" class="col-xl-10 col-lg-12">
 				<div class="row">
 					<div class="col-xl-10 mx-auto box-content">
 						<div class="content-header">
 							<h1>Monitoreo de biodiversidad</h1>
-							<h3 class="content-title bg-blue">
-								Elegir Línea de Monitoreo Transecto Punto (MTP)
-							</h3>
-							<h3 class="content-title bg-green">
+							<h4 class="text-center">
 								Metodología TIM Perú
-							</h3>
+							</h4>
+							<div class="content-footer bb-2">
+								<div class="bl-footer">
+									<p>Si no hizo la observación, escriba 0000.</p>
+									<p>Si hizo la observación y no hubo especies, escriba 000.</p>
+									<p>Si no sabe con certeza algún dato, escriba 00.</p>
+									<p>Escriba las medidas con 3 grados de precisión. Ejemplo: 1.792.</p>
+									<p>Escriba las coordenadas con 4 grados de precisión. Ejemplo: -110.8170.</p>
+								</div>
+							</div>
 						</div>
 						<!--    AQUI INGRESA EL CÓDIGO FUENTE DE LA APP   -->
-						<div class="content-body">
+						<div class="mt-4">
 							<div class="container forms align-items-center">
 								<div class="row">
-									<div class="col-lg-8 col-sm-12 mx-auto">
+									<div class="col-sm-12 mx-auto">
 										<div class="grupo">
-											<div class="col-md-2 col-sm-12">
-												<label for="text" class="col-form-label">Línea MTP</label>
-											</div>
-											<div class="col-md-10 col-sm-12">
-												<select id="measurementlinea_mtpSelect" name="selectlinea_mtp">
-													<option value="notselected"></option>
+											<div class="col-sm-8 m-auto">
+												<select id="measurementlinea_mtpSelect" name="selectlinea_mtp" class="w-100">
+													<option value="" disabled selected>Elige Línea de Monitoreo Transecto Punto (MTP)</option>
 													<option value="Nuevo">Nuevo</option>
 													<option value="Eduardo*(-10.5557,-75.4151) (-10.5565,-75.4172)">Eduardo*(-10.5557,-75.4151) (-10.5565,-75.4172)</option>
 													<!--	Completar información	-->
 												</select>
 											</div>
 										</div>
-										<div class="grupo">
-											<div class="col-md-2 col-sm-12">
-												<label for="measurementmedicionMedicion" class="dropDownTitles col-form-label">Medicion</label>
+										<div class="d-flex flex-row flex-wrap">
+											<div class="grupo col-sm-6 d-flex flex-column align-items-left">
+												<div class="col-md-2 col-sm-12">
+													<label for="measurementmedicionMedicion" class="dropDownTitles col-form-label">Medicion</label>
+												</div>
+												<div class="col-sm-12 w-80">
+													<select id="measurementmedicionMedicion" name="selectmedicion" class="w-100">
+														<option value="" disabled selected>Desplegar opciones</option>
+														<option value="Nuevo">Nuevo</option>
+														<option value="Eduardo*10-05-2023">Eduardo*10-05-2023</option>
+														<!--	Completar información	-->
+													</select>
+												</div>
 											</div>
-											<div class="col-md-10 col-sm-12">
-												<select id="measurementmedicionMedicion" name="selectmedicion">
-													<option value="notselected"> </option>
-													<option value="Nuevo">Nuevo</option>
-													<option value="Eduardo*10-05-2023">Eduardo*10-05-2023</option>
-													<!--	Completar información	-->
-												</select>
+											<div class="grupo col-sm-6 d-flex flex-column align-items-left">
+												<div class="col-md-2 col-sm-12">
+													<label for="measurementobservacionesObservaciones" class="dropDownTitles col-form-label">Observaciones</label>
+												</div>
+												<div class="col-sm-12 w-80">
+													<select id="measurementobservacionesObservaciones" name="selectobservaciones" class="w-100">
+														<option value="" disabled selected>Introducir datos</option>
+														<option value="arbol">Arbol</option>
+														<option value="arbusto">Arbusto</option>
+														<!--	Completar información	-->
+													</select>
+												</div>
 											</div>
-										</div>
-										<div class="grupo">
-											<div class="col-md-2 col-sm-12">
-												<label for="measurementobservacionesObservaciones" class="dropDownTitles col-form-label">Observaciones</label>
+											<div class="grupo col-sm-6 d-flex flex-column align-items-left">
+												<div class="col-md-2 col-sm-12">
+													<label for="measurementPuntoNumero" class="dropDownTitles col-form-label">Transecto</label>
+												</div>
+												<div class="col-sm-12 w-80">
+													<select id="measurementPuntoNumero" name="selectPunto" class="w-100">
+														<option value="" disabled selected>Introducir datos</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+													</select>
+												</div>
 											</div>
-											<div class="col-md-10 col-sm-12">
-												<select id="measurementobservacionesObservaciones" name="selectobservaciones">
-													<option value="notselected"> </option>
-													<option value="arbol">Arbol</option>
-													<option value="arbusto">Arbusto</option>
-													<!--	Completar información	-->
-												</select>
-											</div>
-										</div>
-										<div class="grupo">
-											<div class="col-md-2 col-sm-12">
-												<label for="measurementPuntoNumero" class="dropDownTitles col-form-label">Punto</label>
-											</div>
-											<div class="col-md-10 col-sm-12">
-												<select id="measurementPuntoNumero" name="selectPunto">
-													<option value="notselected"> </option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-												</select>
+											<div class="grupo col-sm-6 d-flex flex-column align-items-left">
+												<div class="col-md-2 col-sm-12">
+													<label for="measurementPuntoNumero" class="dropDownTitles col-form-label">Punto</label>
+												</div>
+												<div class="col-sm-12 w-80">
+													<select id="measurementPuntoNumero" name="selectPunto" class="w-100">
+														<option value="" disabled selected>Desplegar opciones</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+													</select>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-3 login-buttons">
+									<div class="col-12 login-buttons">
 										<a href="ingresar-excel.html" class="button button-primary">Cargar datos desde excel</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="content-footer bb-2">
-							<div class="bl-footer">
-								<p>Si no hizo la observación, escriba 0000.</p>
-								<p>Si hizo la observación y no hubo especies, escriba 000.</p>
-								<p>Si no sabe con certeza algún dato, escriba 00.</p>
-								<p>Escriba las medidas con 3 grados de precisión. Ejemplo: 1.792.</p>
-								<p>Escriba las coordenadas con 4 grados de precisión. Ejemplo: -110.8170.</p>
+					</div>
+					<div class="branding">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="images/minan-brand.png" alt="MINAN">
+							</div>
+							<div class="col-sm-4">
+								<img src="images/sernanp-brand.png" alt="SERNANP">
+							</div>
+							<div class="col-sm-4">
+								<img src="images/copale-brand.png" alt="COPALE">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="branding">
-				<div class="row">
-					<div class="col-sm-4">
-						<img src="images/minan-brand.png" alt="MINAN">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/sernanp-brand.png" alt="SERNANP">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/copale-brand.png" alt="COPALE">
-					</div>
-				</div>
-			</div>
+
 		</main>
 	</div>
 	<footer class="col-12 copyright">

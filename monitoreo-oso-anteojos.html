@@ -21,9 +21,6 @@
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<a class="navbar-brand" href="#">
-						<img src="images/sernanp-brand.svg" alt="sernanp" />
-					</a>
 					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 						<div class="offcanvas-header">
 							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
@@ -41,66 +38,65 @@
 										<li class="nav-item">
 											<a href="admin.html">Herramientas de Admin</a>
 										</li>
-										<li class="nav-item">
-											<a href="https://ga.sippsperu.com/" target="_blank">Gestor de aplicativos</a>
-										</li>
 									</ul>
 								</div>
-								<div id="menu-xl">
+								<div id="menu-xl menu">
 									<ul id="navlist">
 										<li id="m-pap">
 											<a href="mostrar-mapas.html">Mostrar mapas</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="m-bio">
 											<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="m-acc">
 											<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="m-pro">
 											<a href="monitoreo-productivo.html">Monitoreo productivo</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="m-oso">
 											<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="m-cer">
 											<a href="marcas-certificacion.html">Marcas de certificación</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 										<li id="l-tim">
 											<a href="linea-tim.html">Línea TIM</a>
-											<img src="images/img_trans.gif" width="1" height="1">
-										</li>
-										<li id="l-out">
-											<a href="index.html">Cerrar sesión</a>
-											<img src="images/img_trans.gif" width="1" height="1">
 										</li>
 									</ul>
 								</div>
+								<div class="menu">
+									<a href="privacidad.html">Privacidad</a>
+								</div>
 							</div>
-							<div class="bottom">
-								<a href="privacidad.html">Privacidad</a>
-							</div>
+
 						</div>
 					</div>
 				</div>
 			</nav>
 		</div>
-
+		<header class="navbar">
+			<div class="container-logo">
+				<img src="images/logo-sipps.png" alt="Logo SIPPS" width="150">
+			</div>
+			<div>
+				<button id="" class="button-active-login">
+					<a href="login.html">Cerrar sesión</a>
+				</button>
+			</div>
+		</header>
 		<main id="wrapper" class="row">
 			<nav id="navigation" class="col-xl-2">
 				<div class="top">
+					<p class="usuario-title">Nombre de usuario</p>
 					<div id="menu-sm" class="brand">
-						<img src="images/sernanp-brand.svg" alt="sernanp" />
+						
 						<ul class="menu">
 							<li>
 								<a href="admin.html">usuario@dominio.com</a>
 							</li>
+						</ul>
+						<ul class="menu">
 							<li>
 								<a href="admin.html">Herramientas de Admin</a>
 							</li>
@@ -111,43 +107,40 @@
 					</div>
 					<div id="menu-xl">
 						<ul id="navlist">
-							<li id="m-pap">
+							<li id="m-pap" class="">
 								<a href="mostrar-mapas.html">Mostrar mapas</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-bio">
+							<li id="m-bio" class="">
 								<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-acc">
+							<li id="m-acc" class="">
 								<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-pro">
 								<a href="monitoreo-productivo.html">Monitoreo productivo</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-oso">
+							<li id="m-oso" class="link-active">
 								<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="m-cer">
 								<a href="marcas-certificacion.html">Marcas de certificación</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="l-tim">
 								<a href="linea-tim.html">Línea TIM</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
-							<li id="l-out">
+							<!-- <li id="l-out">
 								<a href="index.html">Cerrar sesión</a>
 								<img src="images/img_trans.gif" width="1" height="1">
-							</li>
+							</li> -->
 						</ul>
 					</div>
-				</div>
-				<div class="bottom">
-					<a href="privacidad.html">Privacidad</a>
+					<ul class="menu">
+						<a href="privacidad.html">Privacidad</a>
+					</ul>
 				</div>
 			</nav>
 			
@@ -453,17 +446,17 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="branding">
-				<div class="row">
-					<div class="col-sm-4">
-						<img src="images/minan-brand.png" alt="MINAN">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/sernanp-brand.png" alt="SERNANP">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/copale-brand.png" alt="COPALE">
+				<div class="branding">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="images/logo-vogel.png" alt="VOGEL">
+						</div>
+						<div class="col-sm-6">
+							<img src="images/logo-gic.png" alt="SERNAP">
+						</div>
+						<!-- <div class="col-sm-4">
+							<img src="images/copale-brand.png" alt="COPALE">
+						</div> -->
 					</div>
 				</div>
 			</div>

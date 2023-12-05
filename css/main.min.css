@@ -78,7 +78,7 @@ u {
 }
 @media(min-width:1200px) {
     #pagecontainer {
-        grid-template-areas:"m m m" "b b b" "t t i"
+        grid-template-areas:"m m m" "b b b" "i i i""t t t"
     }
 }
 #mapdiv {
@@ -114,9 +114,11 @@ u {
     font-weight:600
 }
 #navigation .top #menu-sm ul.menu,nav.navbar .top #menu-sm ul.menu {
-    margin-bottom:3rem;
+    margin-bottom:1rem;
     padding:0;
-    text-align:left
+    text-align:left;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 1rem;;
 }
 #navigation .top #menu-sm ul.menu li,nav.navbar .top #menu-sm ul.menu li {
     font-size:inherit;
@@ -135,7 +137,8 @@ u {
     background-color:#fff
 }
 #navigation .top #menu-xl,nav.navbar .top #menu-xl {
-    text-align:right
+    text-align:right;
+    border-bottom: 3px solid #fff;
 }
 #navigation .top #menu-xl ul#navlist,nav.navbar .top #menu-xl ul#navlist {
     list-style:none;
@@ -261,7 +264,7 @@ main#wrapper #content .box-content .content-header h1 {
 }
 main#wrapper #content .box-content .content-header h2.content-title,main#wrapper #content .box-content .content-header h3.content-title {
     color:#fff;
-    font-weight:400;
+    font-weight:700;
     margin:0;
     padding:.5rem 0;
     text-align:center
@@ -280,7 +283,7 @@ main#wrapper #content .box-content .content-header h3.content-title {
     font-size:clamp(1.25rem,1.5vw,1.25rem)
 }
 main#wrapper #content .box-content .content-body {
-    background-color:rgba(168,218,219,.8);
+    background-color:rgba(168,218,219,.5);
     padding:3rem 0
 }
 main#wrapper #content .box-content .content-footer {
@@ -297,7 +300,6 @@ main#wrapper #content .box-content .content-footer p:last-child {
     margin:0
 }
 main#wrapper #content .box-content .content-footer .bl-footer {
-    border-left:1px solid #fff;
     margin-left:1rem;
     padding-left:1rem;
     text-align:left
@@ -704,7 +706,7 @@ table,table .table-striped {
     text-align:center
 }
 table .table-striped thead,table thead {
-    background-color:#32425b;
+    background-color:#1489A4;
     color:#fff
 }
 table .table-striped thead th,table thead th {
@@ -714,7 +716,7 @@ table .table-striped tbody tr td *,table tbody tr td * {
     color:red!important
 }
 .table-responsive.table-secondary .table-title {
-    background-color:#6b734e;
+    background-color:#1489A4;
     color:#fff;
     margin:0;
     padding:.5em 0;
@@ -722,7 +724,7 @@ table .table-striped tbody tr td *,table tbody tr td * {
 }
 .table-responsive.table-secondary thead tr th {
     background-color:#a8dadb;
-    color:#6b734e
+    color:#1489A4;
 }
 .table-responsive.table-secondary .bg-green th {
     background-color:#6b734e;
@@ -761,9 +763,9 @@ table .table-striped tbody tr td *,table tbody tr td * {
     outline:0
 }
 .grupo {
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
+    -webkit-box-align:left;
+    -ms-flex-align:left;
+    align-items:left;
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
@@ -842,7 +844,7 @@ select:not(:-internal-list-box) {
     margin-top:2rem
 }
 .cards {
-    --visible-cols:4;
+    --visible-cols:2;
     --col-gap:10px;
     --col-hint:2rem;
     --scrollbar-padding:20px;
@@ -893,7 +895,7 @@ select:not(:-internal-list-box) {
     -ms-flex-pack:center;
     -webkit-box-align:center;
     -ms-flex-align:center;
-    align-items:center;
+    align-items:left;
     background-color:transparent;
     border-radius:10px;
     display:-webkit-box;
@@ -980,7 +982,8 @@ h3.content-title.bg-blue {
 }
 
 .col-8.mx-auto.login-buttons button.button.button-primary {
-    padding: 20px;
+    padding: 35px;
+    font-size: 30px;
 }
 header.navbar{
     background-color: #F0F0F0;
@@ -1029,4 +1032,64 @@ header.navbar .button-login a{
 }
 div#menu-sm p {
     color: #fff;
+}
+nav#navigation {
+    padding-left: 25px;
+}
+
+#navigation li {
+    list-style: none;
+}
+#navigation li a {
+    font-weight: 400;
+}
+.usuario-title{
+    padding:0.5rem 1rem ;
+    color: #fff;
+    margin: 0
+}
+select#udaSelect ,select#udaSelect:focus,.card input:focus,.card select:focus{
+    background: #f0f0f0;
+    border-radius: 5px;
+    color: #7698A3;
+}
+input, select, input.focus, select:focus,.card input,.card select,#mapcontrol select#table_option,#mapcontrol input#table_optionOpacity, #mapcontrol select#table_optionOpacity, #selectactividad select,#selectactividad select:focus{
+    width: 80%;
+    background-color: #f0f0f0;
+    color: #7698A3;
+    border-radius:5px;
+}
+#mapcontrol .py-4.centered {
+    width: 100%;
+    text-align: center;
+}
+#mapcontrol .py-4.centered a {
+    padding: 35px 200px;
+    font-size: 30px;
+}
+#mapinfodisplay tr th {
+    padding: 25px 10px;
+    font-size: 15px;
+}
+.link-active{
+    background: #ea4e34!important;
+}
+ul#navlist a {
+    padding: 0.5rem 1rem;
+}
+nav#navigation {
+    min-height: 88vh;
+}
+button.forget-pass a {
+    font-weight: 700;
+}
+
+.botones-monitoreo-acciones .button{
+    width: 300px;
+    font-size: 20px;
+}
+.col-12.login-buttons a {
+    width: 350px;
+    padding: 30px 0;
+    font-size: 20px;
 }

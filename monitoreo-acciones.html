@@ -91,16 +91,28 @@
 				</div>
 			</nav>
 		</div>
-
+		<header class="navbar">
+			<div class="container-logo">
+				<img src="images/logo-sipps.png" alt="Logo SIPPS" width="150">
+			</div>
+			<div>
+				<button id="" class="button-active-login">
+					<a href="login.html">Cerrar sesión</a>
+				</button>
+			</div>
+		</header>
 		<main id="wrapper" class="row">
 			<nav id="navigation" class="col-xl-2">
 				<div class="top">
+					<p class="usuario-title">Nombre de usuario</p>
 					<div id="menu-sm" class="brand">
-						<img src="images/sernanp-brand.svg" alt="sernanp" />
+						
 						<ul class="menu">
 							<li>
 								<a href="admin.html">usuario@dominio.com</a>
 							</li>
+						</ul>
+						<ul class="menu">
 							<li>
 								<a href="admin.html">Herramientas de Admin</a>
 							</li>
@@ -111,43 +123,40 @@
 					</div>
 					<div id="menu-xl">
 						<ul id="navlist">
-							<li id="m-pap">
+							<li id="m-pap" class="">
 								<a href="mostrar-mapas.html">Mostrar mapas</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-bio">
 								<a href="monitoreo-biodiversidad.html">Monitoreo de biodiversidad</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
-							<li id="m-acc">
+							<li id="m-acc" class="link-active">
 								<a href="monitoreo-acciones.html">Monitoreo de acciones</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-pro">
 								<a href="monitoreo-productivo.html">Monitoreo productivo</a>
-								<img src="images/img_trans.gif" width="1" height="1">
+								
 							</li>
 							<li id="m-oso">
 								<a href="monitoreo-oso-anteojos.html">Monitoreo de oso de anteojos</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="m-cer">
 								<a href="marcas-certificacion.html">Marcas de certificación</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
 							<li id="l-tim">
 								<a href="linea-tim.html">Línea TIM</a>
-								<img src="images/img_trans.gif" width="1" height="1">
 							</li>
-							<li id="l-out">
+							<!-- <li id="l-out">
 								<a href="index.html">Cerrar sesión</a>
 								<img src="images/img_trans.gif" width="1" height="1">
-							</li>
+							</li> -->
 						</ul>
 					</div>
-				</div>
-				<div class="bottom">
-					<a href="privacidad.html">Privacidad</a>
+					<ul class="menu">
+						<a href="privacidad.html">Privacidad</a>
+					</ul>
 				</div>
 			</nav>
 			
@@ -156,70 +165,69 @@
 					<div class="col-xl-10 mx-auto box-content">
 						<div class="content-header">
 							<h1>Monitoreo de acciones</h1>
-							<h3 class="content-title bg-blue">
-								&nbsp;
-							</h3>
 						</div>
 						<!--    AQUI INGRESA EL CÓDIGO FUENTE DE LA APP   -->
-						<div class="content-body">
+						<div class="col-lg-8 col-sm-6 mx-auto">
+							<div class="grupo justify-content-center">
+								<div id="selectactividad" class="col-sm-8">
+									<select name="selectactividad" class="w-100">
+										<option value="" disabled selected>Seleccione una Acción</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Chontabamba-Sector estadistico Pusapno_160622">Acompañamiento a la toma de datos con APP movil ODK Distrito de Chontabamba-Sector estadistico Pusapno_160622</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Oxapampa - Sector estadistico Sogormo_230622">Acompañamiento a la toma de datos con APP movil ODK Distrito de Oxapampa - Sector estadistico Sogormo_230622</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Albariño_150722">Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Albariño_150722</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Puerto bermudez_140722">Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Puerto bermudez_140722</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK2_271022">Acompañamiento a la toma de datos con APP movil ODK2_271022</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_070622">Acompañamiento a la toma de datos con APP movil ODK_070622</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_100522">Acompañamiento a la toma de datos con APP movil ODK_100522</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_250722">Acompañamiento a la toma de datos con APP movil ODK_250722</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_260722">Acompañamiento a la toma de datos con APP movil ODK_260722</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_261022">Acompañamiento a la toma de datos con APP movil ODK_261022</option>
+										<option value="Acompañamiento a la toma de datos con APP movil ODK_281022">Acompañamiento a la toma de datos con APP movil ODK_281022</option>
+										<option value="Aula verde Cdp Finca san alberto (Turismo Cientifico)_031022">Aula verde Cdp Finca san alberto (Turismo Cientifico)_031022</option>
+										<option value="Aula verde-Polinizacion de abejas_040622">Aula verde-Polinizacion de abejas_040622</option>
+										<option value="Capacitacion en la Intalacion del TIM OSO Ubicado en Osopampa_210622">Capacitacion en la Intalacion del TIM OSO Ubicado en Osopampa_210622</option>
+										<option value="Capacitacion en la Intalacion del TIM OSO Ubicado en Prosoya_220622">Capacitacion en la Intalacion del TIM OSO Ubicado en Prosoya_220622</option>
+										<option value="Comunidad de practica_041022">Comunidad de practica_041022</option>
+										<option value="Curso introductorio al analisis de la informacion generada en el TIM_101022">Curso introductorio al analisis de la informacion generada en el TIM_101022</option>
+										<option value="Demostracion de tecnologia en la Finca San Alberto_150922">Demostracion de tecnologia en la Finca San Alberto_150922</option>
+										<option value="Evento de seguimiento comunidad de practica_300622">Evento de seguimiento comunidad de practica_300622</option>
+										<option value="Fortalecimiento de capacidades a los practicantes de la UNDAC en el manejo de SIG para la generacion de los mapas cartograficos de los TIM productivos en Tsachopen_241022">Fortalecimiento de capacidades a los practicantes de la UNDAC en el manejo de SIG para la generacion de los mapas cartograficos de los TIM productivos en Tsachopen_241022</option>
+										<option value="Fortalecimiento de capacidades en  el monitoreo del TIM productivo N01  en la Finca San Alberto_240822">Fortalecimiento de capacidades en el monitoreo del TIM productivo N01 en la Finca San Alberto_240822</option>
+										<option value="Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Alberto_300922">Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Alberto_300922</option>
+										<option value="Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Luis_011022">Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Luis_011022</option>
+										<option value="Fortalecimiento de capacidades en el manejo del Sistema de Informacion Geografico aplicado al TIM_101022">Fortalecimiento de capacidades en el manejo del Sistema de Informacion Geografico aplicado al TIM_101022</option>
+										<option value="Fortalecimiento de capacidades en la Instalacion del Transecto Integral de Monitoreo en la comunidad nativa de Tsachopen_060822">Fortalecimiento de capacidades en la Instalacion del Transecto Integral de Monitoreo en la comunidad nativa de Tsachopen_060822</option>
+										<option value="Fortalecimiento de capacidades en la medicion de perfiles de fuste en el TIM productivo 01  e instalacion de los dendrometros mecanicos y el Minikin (Estacion metereologica)_181022">Fortalecimiento de capacidades en la medicion de perfiles de fuste en el TIM productivo 01 e instalacion de los dendrometros mecanicos y el Minikin (Estacion metereologica)_181022</option>
+										<option value="Fortalecimiento de las capacidades en campo de colecta de datosgeo referenciados en base a una estructura de base de datos para el monitoreo de la biodiversidad_020822">Fortalecimiento de las capacidades en campo de colecta de datosgeo referenciados en base a una estructura de base de datos para el monitoreo de la biodiversidad_020822</option>
+										<option value="Nuevo">Nuevo</option>
+										<option value="Orientación para las practicas profecionales y tesis de investigacion con universidad_270922">Orientación para las practicas profecionales y tesis de investigacion con universidad_270922</option>
+										<option value="Reunion de coordinacionen la oficina del SERNAM_060922">Reunion de coordinacionen la oficina del SERNAM_060922</option>
+										<option value="Reunion de validacion de mejora del APP OSO y base de datos_060622">Reunion de validacion de mejora del APP OSO y base de datos_060622</option>
+										<option value="Reunion previa de coodinacionBrigadas de campo TIM OSO_200622">Reunion previa de coodinacionBrigadas de campo TIM OSO_200622</option>
+										<option value="Reunion previa de coodinacionBrigadas de campo TIM OSO_300522">Reunion previa de coodinacionBrigadas de campo TIM OSO_300522</option>
+										<option value="SIPPS_061022">SIPPS_061022</option>
+										<option value="Segundo Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica">Segundo Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica</option>
+										<option value="Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Huancabamba_061022">Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Huancabamba_061022</option>
+										<option value="Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Tsachopen_031022">Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Tsachopen_031022</option>
+										<option value="Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica_030622">Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica_030622</option>
+										<option value="Taller de orientacion para las practicas profesionales y tesis de investigacion con Universidades_240922">Taller de orientacion para las practicas profesionales y tesis de investigacion con Universidades_240922</option>
+										<option value="Validacion BD-OSO e instalacion del TIM OSO2_010622">Validacion BD-OSO e instalacion del TIM OSO2_010622</option>
+										<option value="Validacion BD-OSO e instalacion del TIM OSO_310522">Validacion BD-OSO e instalacion del TIM OSO_310522</option>
+									  </select>
+								</div>
+							</div>
+						</div>
+						<div class="content-footer bb-2">
+							<div class="bl-footer">
+								<p>Si no sabe con certeza algún dato, ingrese 00.</p>
+								<p>Escriba las medidas con 3 grados de precisión. Ejemplo: 1.792</p>
+								<p>Escriba las coordenadas con 4 grados de precisión. Ejemplo: -110.8170</p>
+							</div>
+						</div>
+						
+						<div class="py-3">
 							<div class="container forms align-items-center">
 								<div class="row">
-									<div class="col-lg-8 col-sm-12 mx-auto">
-										<div class="grupo">
-											<div class="col-md-2 col-sm-12">
-												<label for="text" class="col-form-label">Acción</label>
-											</div>
-											<div id="selectactividad" class="col-md-10 col-sm-12">
-												<select name="selectactividad">
-													<option value="notselected"></option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Chontabamba-Sector estadistico Pusapno_160622">Acompañamiento a la toma de datos con APP movil ODK Distrito de Chontabamba-Sector estadistico Pusapno_160622</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Oxapampa - Sector estadistico Sogormo_230622">Acompañamiento a la toma de datos con APP movil ODK Distrito de Oxapampa - Sector estadistico Sogormo_230622</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Albariño_150722">Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Albariño_150722</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Puerto bermudez_140722">Acompañamiento a la toma de datos con APP movil ODK Distrito de Puerto bermudez-Sector estadistico Puerto bermudez_140722</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK2_271022">Acompañamiento a la toma de datos con APP movil ODK2_271022</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_070622">Acompañamiento a la toma de datos con APP movil ODK_070622</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_100522">Acompañamiento a la toma de datos con APP movil ODK_100522</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_250722">Acompañamiento a la toma de datos con APP movil ODK_250722</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_260722">Acompañamiento a la toma de datos con APP movil ODK_260722</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_261022">Acompañamiento a la toma de datos con APP movil ODK_261022</option>
-													<option value="Acompañamiento a la toma de datos con APP movil ODK_281022">Acompañamiento a la toma de datos con APP movil ODK_281022</option>
-													<option value="Aula verde Cdp Finca san alberto (Turismo Cientifico)_031022">Aula verde Cdp Finca san alberto (Turismo Cientifico)_031022</option>
-													<option value="Aula verde-Polinizacion de abejas_040622">Aula verde-Polinizacion de abejas_040622</option>
-													<option value="Capacitacion en la Intalacion del TIM OSO Ubicado en Osopampa_210622">Capacitacion en la Intalacion del TIM OSO Ubicado en Osopampa_210622</option>
-													<option value="Capacitacion en la Intalacion del TIM OSO Ubicado en Prosoya_220622">Capacitacion en la Intalacion del TIM OSO Ubicado en Prosoya_220622</option>
-													<option value="Comunidad de practica_041022">Comunidad de practica_041022</option>
-													<option value="Curso introductorio al analisis de la informacion generada en el TIM_101022">Curso introductorio al analisis de la informacion generada en el TIM_101022</option>
-													<option value="Demostracion de tecnologia en la Finca San Alberto_150922">Demostracion de tecnologia en la Finca San Alberto_150922</option>
-													<option value="Evento de seguimiento comunidad de practica_300622">Evento de seguimiento comunidad de practica_300622</option>
-													<option value="Fortalecimiento de capacidades a los practicantes de la UNDAC en el manejo de SIG para la generacion de los mapas cartograficos de los TIM productivos en Tsachopen_241022">Fortalecimiento de capacidades a los practicantes de la UNDAC en el manejo de SIG para la generacion de los mapas cartograficos de los TIM productivos en Tsachopen_241022</option>
-													<option value="Fortalecimiento de capacidades en  el monitoreo del TIM productivo N01  en la Finca San Alberto_240822">Fortalecimiento de capacidades en el monitoreo del TIM productivo N01 en la Finca San Alberto_240822</option>
-													<option value="Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Alberto_300922">Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Alberto_300922</option>
-													<option value="Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Luis_011022">Fortalecimiento de capacidades en La instalacion del TIM OSO 1 - San Luis_011022</option>
-													<option value="Fortalecimiento de capacidades en el manejo del Sistema de Informacion Geografico aplicado al TIM_101022">Fortalecimiento de capacidades en el manejo del Sistema de Informacion Geografico aplicado al TIM_101022</option>
-													<option value="Fortalecimiento de capacidades en la Instalacion del Transecto Integral de Monitoreo en la comunidad nativa de Tsachopen_060822">Fortalecimiento de capacidades en la Instalacion del Transecto Integral de Monitoreo en la comunidad nativa de Tsachopen_060822</option>
-													<option value="Fortalecimiento de capacidades en la medicion de perfiles de fuste en el TIM productivo 01  e instalacion de los dendrometros mecanicos y el Minikin (Estacion metereologica)_181022">Fortalecimiento de capacidades en la medicion de perfiles de fuste en el TIM productivo 01 e instalacion de los dendrometros mecanicos y el Minikin (Estacion metereologica)_181022</option>
-													<option value="Fortalecimiento de las capacidades en campo de colecta de datosgeo referenciados en base a una estructura de base de datos para el monitoreo de la biodiversidad_020822">Fortalecimiento de las capacidades en campo de colecta de datosgeo referenciados en base a una estructura de base de datos para el monitoreo de la biodiversidad_020822</option>
-													<option value="Nuevo">Nuevo</option>
-													<option value="Orientación para las practicas profecionales y tesis de investigacion con universidad_270922">Orientación para las practicas profecionales y tesis de investigacion con universidad_270922</option>
-													<option value="Reunion de coordinacionen la oficina del SERNAM_060922">Reunion de coordinacionen la oficina del SERNAM_060922</option>
-													<option value="Reunion de validacion de mejora del APP OSO y base de datos_060622">Reunion de validacion de mejora del APP OSO y base de datos_060622</option>
-													<option value="Reunion previa de coodinacionBrigadas de campo TIM OSO_200622">Reunion previa de coodinacionBrigadas de campo TIM OSO_200622</option>
-													<option value="Reunion previa de coodinacionBrigadas de campo TIM OSO_300522">Reunion previa de coodinacionBrigadas de campo TIM OSO_300522</option>
-													<option value="SIPPS_061022">SIPPS_061022</option>
-													<option value="Segundo Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica">Segundo Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica</option>
-													<option value="Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Huancabamba_061022">Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Huancabamba_061022</option>
-													<option value="Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Tsachopen_031022">Taller Manejo de cultivo ded abeja Nativa (Meliponas) en Tsachopen_031022</option>
-													<option value="Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica_030622">Taller SIG enfocado en conectividad y cuencas en el marco de la comunidad de practica_030622</option>
-													<option value="Taller de orientacion para las practicas profesionales y tesis de investigacion con Universidades_240922">Taller de orientacion para las practicas profesionales y tesis de investigacion con Universidades_240922</option>
-													<option value="Validacion BD-OSO e instalacion del TIM OSO2_010622">Validacion BD-OSO e instalacion del TIM OSO2_010622</option>
-													<option value="Validacion BD-OSO e instalacion del TIM OSO_310522">Validacion BD-OSO e instalacion del TIM OSO_310522</option>
-												  </select>
-											</div>
-										</div>
-									</div>
-									<div class="col-3 login-buttons">
-										<a href="ingresar-excel.html" class="button button-primary">Cargar datos desde excel</a>
-									</div>
 									<div class="col-12">
 										<div class="cards">
 											<div class="card">
@@ -306,40 +314,35 @@
 										<div class="cards">
 											<div class="card">
 												<label class="card-title">Longitud</label>
-												<input class="card-desc" type="text" name="row0*actividad*longitud">
+												<input class="card-desc" type="text" name="row0*actividad*longitud" placeholder="Ejemplo -110.8170">
 											</div>
 											<div class="card">
 												<label class="card-title">Latitud</label>
-												<input class="card-desc" type="text" name="row0*actividad*latitud">
+												<input class="card-desc" type="text" name="row0*actividad*latitud" placeholder="Ejemplo -110.8170">
 											</div>
 										</div>
 									</div>
-									<div class="col-2 mx-auto mt-2">
-										<button class="button button-primary" type="submit">Guardar</button>
+									<div class="col-12 login-buttons d-flex justify-content-around botones-monitoreo-acciones">
+										<button class="button button-primary p-4" type="submit">Guardar</button>
+										<a href="ingresar-excel.html" class="button button-primary p-4">Cargar datos desde excel</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="content-footer bb-2">
-							<div class="bl-footer">
-								<p>Si no sabe con certeza algún dato, ingrese 00.</p>
-								<p>Escriba las medidas con 3 grados de precisión. Ejemplo: 1.792</p>
-								<p>Escriba las coordenadas con 4 grados de precisión. Ejemplo: -110.8170</p>
-							</div>
-						</div>
+
 					</div>
 				</div>
-			</div>
-			<div class="branding">
-				<div class="row">
-					<div class="col-sm-4">
-						<img src="images/minan-brand.png" alt="MINAN">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/sernanp-brand.png" alt="SERNANP">
-					</div>
-					<div class="col-sm-4">
-						<img src="images/copale-brand.png" alt="COPALE">
+				<div class="branding">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="images/logo-vogel.png" alt="VOGEL">
+						</div>
+						<div class="col-sm-6">
+							<img src="images/logo-gic.png" alt="SERNAP">
+						</div>
+						<!-- <div class="col-sm-4">
+							<img src="images/copale-brand.png" alt="COPALE">
+						</div> -->
 					</div>
 				</div>
 			</div>

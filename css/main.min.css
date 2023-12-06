@@ -1089,9 +1089,6 @@ div#buttons1 div div a {
 div#buttons1{
     margin:50px 0;
 }
-div#buttons1 {
-    padding: 50px 0;
-}
 
 .button.button-primary:hover, button.button-primary:hover{
     color: #1489A4;

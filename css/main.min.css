@@ -395,19 +395,13 @@ textarea {
 .form-check input {
     padding:0
 }
-#udpbody {
-    background-color:#e4ede3
-}
 #udpbody main {
     display:inline-block;
     padding:1em 0 2em
 }
 .udplayout {
-    display:grid;
-    gap:0 1em;
-    grid-template-areas:"titlediv bbtop parchestable" "titlediv udpmapdiv parchestable" "descriptiondiv udpmapdiv parchestable" "descriptiondiv bbbottom parchestable" "legenddiv . parchestable";
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:20px repeat(2,260px) 20px auto;
+    display:flex;
+    flex-direction: column;
     margin:2rem 1.5rem
 }
 .report {
@@ -491,19 +485,10 @@ textarea {
     height:500px;
     margin:.5em 0
 }
-#descriptiondiv,#legenddiv {
-    margin:0 auto;
-    width:90%
-}
-#descriptiondiv p,#legenddiv ul {
-    -webkit-box-shadow:6px 6px 0 0 #adb58c;
-    box-shadow:6px 6px 0 0 #adb58c
-}
 #legenddiv {
     grid-area:legenddiv
 }
 #legenddiv ul {
-    background-color:#fff;
     margin-bottom:0;
     padding:1em
 }
@@ -533,10 +518,10 @@ textarea {
 #descriptiondiv {
     grid-area:descriptiondiv;
     margin-bottom:2em;
+    margin-top:2em;
     padding:0
 }
 #descriptiondiv #descripcionheader {
-    background-color:#6b734e;
     color:#fff;
     margin:0;
     padding:.5em 1em
@@ -550,9 +535,6 @@ textarea {
 }
 #parchestable {
     grid-area:parchestable
-}
-#parchestable,#reporteActividad,#reporteOso {
-    background-color:#a8dadb
 }
 #reporteActividad .reporTabs,#reporteOso .reporTabs {
     font-size:14px;
@@ -571,7 +553,7 @@ textarea {
     padding:.25em 0 .25em .5em
 }
 #reporteActividad h4,#reporteOso h4 {
-    background-color:#6b734e;
+    background-color:#1489A4;
     color:#fff;
     font-weight:400;
     padding:.25em 0 .25em .75em
@@ -585,11 +567,10 @@ textarea {
 }
 @media(min-width:1200px) {
     #titlediv #updmunititle * {
-        text-align:right
+        text-align:center;
     }
 }
 #titlediv #updmunititle #framentation,#titlediv #updmunititle #muniudp {
-    border-bottom:2px solid #765a35;
     margin-bottom:.5em;
     padding-bottom:.5em
 }
@@ -610,7 +591,7 @@ textarea {
 }
 .total {
     background-color:#fff;
-    color:#6b734e;
+    color:#1489A4;
     display:block;
     font-weight:700;
     padding:.25em 0 .25em 1em
@@ -750,7 +731,7 @@ table .table-striped tbody tr td *,table tbody tr td * {
     --bs-table-accent-bg:#fff
 }
 .table-responsive.table-third .table-striped>tbody>tr:nth-of-type(2n)>* {
-    background-color:#6b734e;
+    background-color:#1489A4;
     color:#fff
 }
 .checkbox {
@@ -1127,4 +1108,13 @@ label {
 .bl-footer p {
     font-weight: 500!important;
     font-size: 15px!important;
+}
+.bg-grey{
+    background-color: #f0f0f0;
+}
+div#legenddiv {
+    padding: 25px;
+}
+.bg-blue{
+    background-color:#1489A4;
 }
